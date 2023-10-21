@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: East_Africa_Bikes_production
-  username: East_Africa_Bikes
-  password: <%= ENV["EAST_AFRICA_BIKES_DATABASE_PASSWORD"] %>
+  username: alienquest
+  password: alienquest_password
