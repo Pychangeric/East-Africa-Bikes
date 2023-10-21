@@ -1,0 +1,33 @@
+<%= form_for @user do |f| %>
+    <!-- Add a field for the name -->
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, autocomplete: "name" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autocomplete: "email" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+  
+    <div class="field">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  
