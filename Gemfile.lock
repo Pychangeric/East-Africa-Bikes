@@ -76,6 +76,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancan (1.6.10)
     capybara (3.39.2)
       addressable
       matrix
@@ -191,6 +192,7 @@ GEM
     reline (0.3.9)
       io-console (~> 0.5)
     rexml (3.2.6)
+    rolify (6.0.1)
     rubyzip (2.3.2)
     selenium-webdriver (4.14.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -232,6 +234,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cancan
   capybara
   clearance
   debug
@@ -240,6 +243,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
+  rolify
   selenium-webdriver
   sprockets-rails
   stimulus-rails
