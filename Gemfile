@@ -5,6 +5,9 @@ ruby "3.1.3"
 gem 'clearance'
 gem 'rolify'
 gem 'cancan'
+gem 'carrierwave'
+gem 'mini_magick'
+
 
 
 

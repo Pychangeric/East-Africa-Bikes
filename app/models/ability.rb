@@ -10,6 +10,7 @@ class Ability
 
     # Define abilities for admins
     if user.has_role?(:admin)
+      can :create, Event if user.admin?
       can :manage, :all 
       can :manage, User   # Allow admins to manage (read, update, delete) users
       can :monitor, :app   # Add custom ability to monitor app usage
