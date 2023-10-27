@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>EastAfricaBikes</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>EastAfricaBikes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-  <body>
+<body>
   <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
-    </div>
-    <%= yield %>
-    <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', sign_in_path %>
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
     <% end %>
-  </body>
+  </div>
+
+  <% if signed_in? %>
+    <div>
+      <p>Signed in as: <%= current_user.email %></p>
+      <%= link_to 'Logout', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
+    </div>
+  <% else %>
+    <%= link_to 'Sign in', sign_in_path %>
+  <% end %>
+
+  <%= yield %>
+</body>
 </html>

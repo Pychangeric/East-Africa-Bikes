@@ -1,14 +1,14 @@
 class UsersController < Clearance::UsersController
-    def create
-      @user = user_from_params
+  def create
+    @user = User.new(user_params)
   
-      if @user.save
-        sign_in @user  # Automatically sign in the user after registration
-        redirect_to root_path, notice: 'User was successfully created and signed in.'
-      else
-        render template: 'users/new'  # Render the registration form again with errors
-      end
+    if @user.save
+      sign_in @user
+      redirect_to :root, notice: 'User was successfully created and signed in.'
+    else
+      render template: 'users/new'
     end
+  end
   
     private
   

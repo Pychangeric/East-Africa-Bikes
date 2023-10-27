@@ -3,7 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.3"
 gem 'clearance'
-gem "pg", "~> 1.1"
+gem 'rolify'
+gem 'cancan'
+gem 'carrierwave'
+gem 'mini_magick'
+
 
 
 

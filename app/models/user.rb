@@ -1,6 +1,6 @@
 class User < ApplicationRecord
+  rolify
   include Clearance::User
-
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
+  has_one :admin, dependent: :destroy
+  # ...
 end
