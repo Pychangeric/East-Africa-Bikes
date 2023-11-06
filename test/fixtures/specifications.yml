@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  engine_size: 9.99
+  horsepower: 9.99
+  top_speed: 9.99
+  bike: one
+
+two:
+  engine_size: 9.99
+  horsepower: 9.99
+  top_speed: 9.99
+  bike: two

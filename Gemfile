@@ -1,15 +1,13 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.3"
+ruby "3.2.2"
 gem 'clearance'
 gem 'rolify'
 gem 'cancan'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
-
-
 
 
 
