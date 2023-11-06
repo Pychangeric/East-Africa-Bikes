@@ -7,6 +7,8 @@ gem 'rolify'
 gem 'cancan'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
+
 
 
 

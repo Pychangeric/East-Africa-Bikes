@@ -11,21 +11,14 @@
 </head>
 
 <body>
-  <div id="flash">
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-  </div>
-
   <% if signed_in? %>
-    <div>
-      <p>Signed in as: <%= current_user.email %></p>
-      <%= link_to 'Logout', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
-    </div>
+    <p>Signed in as: <%= current_user.email %></p>
+    <%= link_to 'Logout', sign_out_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
   <% else %>
     <%= link_to 'Sign in', sign_in_path %>
   <% end %>
 
   <%= yield %>
 </body>
+
 </html>

@@ -9,6 +9,11 @@ class UsersController < Clearance::UsersController
       render template: 'users/new'
     end
   end
+
+  def logout
+    sign_out
+    redirect_to root_path, notice: 'You have been logged out.'
+  end
   
     private
   
