@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
-  include Clearance::Controller
 
   def placeholder
-    render plain: 'This feature is not functional at the moment.'
+    # Your placeholder action logic goes here
+    render plain: "This is a placeholder."
   end
+
 end

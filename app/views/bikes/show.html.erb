@@ -1,0 +1,22 @@
+<h1><%= @bike.make %> <%= @bike.model %></h1>
+
+<p>Year: <%= @bike.year %></p>
+<p>Engine Specifications: <%= @bike.engine_specifications %></p>
+<p>Description: <%= @bike.description %></p>
+<p>Price: <%= number_to_currency(@bike.price) %></p>
+
+<h2>Reviews</h2>
+<% if @reviews.any? %>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li>
+        <strong><%= review.author %></strong> (Rating: <%= review.rating %>)
+        <p><%= review.comments %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No reviews yet.</p>
+<% end %>
+
+<%= link_to 'Back', bikes_path %>
