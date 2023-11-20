@@ -1,0 +1,6 @@
+<h1>All Bikes</h1>
+<ul>
+  <% @bikes.each do |bike| %>
+    <li><%= bike.make %> <%= bike.model %> (<%= bike.year %>) - <%= number_to_currency(bike.price) %></li>
+  <% end %>
+</ul>
